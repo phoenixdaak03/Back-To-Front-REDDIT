@@ -83,10 +83,10 @@ export default function GetChat({ chat }: { chat: Post}){
                     <div className='transition duration-1000 p-2'>
                         <div className='flex items-center space-x-5'>
                             <h2 className='text-4xl font-bold my-3'>{chat.title}</h2>
-                            <p className='text-sm'>{upvotes}</p>
+                            <p className='text-sm w-5'>{upvotes}</p>
                             <div className='flex space-x-1'>
-                                <button className='text-sm bg-gray-300 w-7 rounded-full h-7 cursor-pointer' onClick={(e) => {handUpovoteClick(chat._id)}}>↑</button>
-                                <button className='text-sm bg-gray-300 w-7 rounded-full h-7 cursor-pointer'onClick={(e) => {handleDownvoteClick(chat._id)}}>↓</button>
+                                <button className='text-sm bg-gray-300 w-7 rounded-full h-7 cursor-pointer transition duration-300 active:scale-90' onClick={(e) => {handUpovoteClick(chat._id)}}>↑</button>
+                                <button className='text-sm bg-gray-300 w-7 rounded-full h-7 cursor-pointer transition duration-300 active:scale-90'onClick={(e) => {handleDownvoteClick(chat._id)}}>↓</button>
                             </div>
                             
                         </div>
