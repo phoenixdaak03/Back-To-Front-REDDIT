@@ -8,7 +8,7 @@ export default async function Chat({ params }: { params: {id: string}}){
     const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/get-chat/' + data.id, {
         cache: 'no-cache',
     })
-
+    
     const info = await response.json();
 
     return(

@@ -1,5 +1,6 @@
 import { connectToDB } from '@/app/api/db';
 import Posts from './Posts'
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage(){
     const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/posts', {

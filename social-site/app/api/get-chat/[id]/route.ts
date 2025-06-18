@@ -9,6 +9,7 @@ export async function GET(request: NextRequest, { params }: { params: {id: strin
     const id = await new ObjectId(data.id)
     const post = await db.collection('posts').findOne({ _id: id });
 
+    // console.log(post)
     return new Response(JSON.stringify(post), {
         status: 200,
         headers:{
